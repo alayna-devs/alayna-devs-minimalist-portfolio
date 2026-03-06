@@ -3,27 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Resume</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="/resume.html">Resume</a></li>
-                <li><a href="/cover-letter.html">Cover Letter</a></li>
-                <li><a href="/career-goals.html">Career Goals</a></li>
-            </ul>
+            <p>alayna_devs</p>
+            <div><a href="/resume.html">Resume</a></div>
+            <div><a href="/cover-letter.html">Cover Letter</a></div>
+            <div><a href="/career-goals.html">Career Goals</a></div>
         </nav>
     </header>
 
-    <main>
-        <h1>Resume</h1>
-    </main>
+    <main id="main-resume" class="main-resume">
+        <article >
+            <header>
+                <section>
+                    <img src="" alt="">
+                    <h1>Alayna Taylor</h1>
+                    <h2>Software Engineer | Full-Stack Web Developer</h2>
+                </section>
+                <hr>
+
+                <section>
+                    <h3>Summary</h3>
+                    <p>Entry-Level <strong><em>Software Engineer</em></strong> and <strong><em>WGU Computer Science undergraduate</em></strong> with 1 year of experience building full-stack web
+                    applications using React, Node.js, Express, and modern databases. Experienced in developing responsive interfaces and
+                    integrating external APIs. Focused on writing clean,
+                    maintainable code and building practical software solutions from concept to deployment.</p>
+                </section>
+            </header>
+            <hr>
+            <section id="skills">
+                <section>
+                    <h3>Skills</h3>
+                    <ul class="skills-grid">
+                        <li>JavaScript/TypeScript</li>
+                        <li>Python</li>
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>Express.js</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Tailwind CSS</li>
+                        <li>Git</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </section>
     
-    <section>
-        <article></article>
-    </section>
-    <footer></footer>
-    <script src="/nav.js"></script>
+                <section>
+                    <h3>Highlights</h3>
+                    <ul class="highlights-grid">
+                        <li>Full-stack application development</li>
+                        <li>Problem solving and analytical thinking</li>
+                        <li>Clean and maintainable code practices</li>
+                        <li>Responsive and accessible web design</li>
+                        <li>Strong curiosity and continuous learning</li>
+                        <li>Ability to break down complex problems</li>
+                    </ul>
+                </section>
+            </section>
+            <hr>
+            <section id="experience">
+                <h3>Experience</h3>
+                <table>
+                    <caption>Work Experience</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Company</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>02/2025-11/2025</td>
+                            <td>Full-Stack Web Developer Program</td>
+                            <td>Code The Dream</td>
+                            <td>Built web applications using <b>JavaScript, React, and Node.js</b>, strengthening skills in frontend architecture and state
+                            management. Practiced version control, debugging, and project-based development while building interactive applications.</td>
+                        </tr>
+
+                        <tr>
+                            <td>01/2024-06/2024</td>
+                            <td>AWS Cloud Engineer</td>
+                            <td>United Airlines</td>
+                            <td> I migrated and validated customer data within <b>AWS DynamoDB</b>, ensuring profile accuracy across systems. Contributed to a <b>CRM</b>
+                            cloud rewrite using <b>AWS tools, Docker, Java/Spring Boot, and CI/CD workflows</b> while collaborating with the development
+                            team.</td>
+                        </tr>
+
+                        <tr>
+                            <td>05/2023-01/2024</td>
+                            <td>Android App Developer</td>
+                            <td>United Airlines</td>
+                            <td>I developed and debugged mobile app features using <b>Kotlin, Android Studio, and JUnit</b>. Mostly focused on front-end UI behavior with some dynamic data backend
+                            integration.</td>
+                        </tr>
+
+                        <tr>
+                            <td>01/2023-05/2023</td>
+                            <td>Software Engineer Intern</td>
+                            <td>i.c.stars</td>
+                            <td>I built an <b>Augmented Reality mobile feature using Unity and C#</b> that allowed field agents to overlay interactive status
+                            indicators on airport kiosks. Gained experience across <b>frontend development (HTML, CSS, JavaScript, Angular), backend
+                            workflows, and SQL-based data systems</b> while collaborating in a professional engineering environment.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="links">
+                <a href="">Modern Portfolio</a>
+                <a href="">PDF Resume</a>
+            </section>
+        </article>
+    </main>
+    <br>
+    <footer id="footer">
+        <div>
+            <p>Alayna Taylor&copy</p>
+            <p class="year-tag"></p>
+        </div>
+
+        <p>Number</p>
+        <p>Email</p>
+        <p>Chicago, IL</p>
+    </footer>
+    <script>
+        const yearTag = document.querySelector('.year-tag')
+        const date = new Date().getFullYear()
+        yearTag.textContent = date
+
+        console.log("current year: ", date)
+    </script>
 </body>
 </html>
