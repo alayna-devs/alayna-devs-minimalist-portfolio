@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <title>Resume</title>
 </head>
 <body>
@@ -16,20 +17,22 @@
         </nav>
     </header>
 
-    <main id="main-resume" class="main-resume">
-        <article >
+    <main>
+        <article>
             <header>
                 <section>
-                    <img src="" alt="">
-                    <h1>Alayna Taylor</h1>
-                    <h2>Software Engineer | Full-Stack Web Developer</h2>
+                    <div>
+                        <h1>Alayna Taylor</h1>
+                        <h2>Software Engineer | Full-Stack Web Developer | CS Undergraduate</h2>
+                    </div>
+                    <img src="/selfie.png" class="selfie-img" alt="Alayna Taylor">
                 </section>
                 <hr>
 
                 <section>
                     <h3>Summary</h3>
-                    <p>Entry-Level <strong><em>Software Engineer</em></strong> and <strong><em>WGU Computer Science undergraduate</em></strong> with 1 year of experience building full-stack web
-                    applications using React, Node.js, Express, and modern databases. Experienced in developing responsive interfaces and
+                    <p>Entry-Level <span><em>Software Engineer</em></span> and <span><em>WGU Computer Science undergraduate</em></span> with 1 year of experience building full-stack web
+                    applications using <span>React, Node.js, Express, and modern databases.</span> Experienced in developing responsive interfaces and
                     integrating external APIs. Focused on writing clean,
                     maintainable code and building practical software solutions from concept to deployment.</p>
                 </section>
@@ -83,7 +86,7 @@
                             <td>02/2025-11/2025</td>
                             <td>Full-Stack Web Developer Program</td>
                             <td>Code The Dream</td>
-                            <td>Built web applications using <b>JavaScript, React, and Node.js</b>, strengthening skills in frontend architecture and state
+                            <td>Built web applications using <span>JavaScript, React, and Node.js</span>, strengthening skills in frontend architecture and state
                             management. Practiced version control, debugging, and project-based development while building interactive applications.</td>
                         </tr>
 
@@ -91,8 +94,8 @@
                             <td>01/2024-06/2024</td>
                             <td>AWS Cloud Engineer</td>
                             <td>United Airlines</td>
-                            <td> I migrated and validated customer data within <b>AWS DynamoDB</b>, ensuring profile accuracy across systems. Contributed to a <b>CRM</b>
-                            cloud rewrite using <b>AWS tools, Docker, Java/Spring Boot, and CI/CD workflows</b> while collaborating with the development
+                            <td> I migrated and validated customer data within <span>AWS DynamoDB</span>, ensuring profile accuracy across systems. Contributed to a <span>CRM</span>
+                            cloud rewrite using <span>AWS tools, Docker, Java/Spring Boot, and CI/CD workflows</span> while collaborating with the development
                             team.</td>
                         </tr>
 
@@ -100,7 +103,7 @@
                             <td>05/2023-01/2024</td>
                             <td>Android App Developer</td>
                             <td>United Airlines</td>
-                            <td>I developed and debugged mobile app features using <b>Kotlin, Android Studio, and JUnit</b>. Mostly focused on front-end UI behavior with some dynamic data backend
+                            <td>I developed and debugged mobile app features using <span>Kotlin, Android Studio, and JUnit</span>. Mostly focused on front-end UI behavior with some dynamic data backend
                             integration.</td>
                         </tr>
 
@@ -108,30 +111,35 @@
                             <td>01/2023-05/2023</td>
                             <td>Software Engineer Intern</td>
                             <td>i.c.stars</td>
-                            <td>I built an <b>Augmented Reality mobile feature using Unity and C#</b> that allowed field agents to overlay interactive status
-                            indicators on airport kiosks. Gained experience across <b>frontend development (HTML, CSS, JavaScript, Angular), backend
-                            workflows, and SQL-based data systems</b> while collaborating in a professional engineering environment.</td>
+                            <td>I built an <span>Augmented Reality mobile feature using Unity and C#</span> that allowed field agents to overlay interactive status
+                            indicators on airport kiosks. Gained experience across <span>frontend development (HTML, CSS, JavaScript, Angular), backend
+                            workflows, and SQL-based data systems</span> while collaborating in a professional engineering environment.</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
-            <section id="links">
-                <a href="">Modern Portfolio</a>
-                <a href="">PDF Resume</a>
+            <section class="btn-links">
+                <a href="" rel="noopener noreferrer" class="btn-primary" title="Coming soon!"><i class="fa-solid fa-arrow-up-right-from-square"></i>Modern Portfolio</a>
+                <a href="" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fa-solid fa-file-pdf"></i>PDF Resume</a>
+                <a href="https://www.linkedin.com/in/alayna-devs/" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fa-brands fa-linkedin"></i>LinkedIN</a>
+                <a href="https://github.com/alayna-devs" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fa-brands fa-github"></i>GitHub</a>
             </section>
         </article>
     </main>
     <br>
     <footer id="footer">
         <div>
-            <p>Alayna Taylor&copy</p>
+            <p>&copy&nbsp</p>
             <p class="year-tag"></p>
+            <p> &nbspAlayna Taylor. All rights reserved.</p>      
         </div>
 
-        <p>Number</p>
-        <p>Email</p>
-        <p>Chicago, IL</p>
+        <div>
+            <p><i class="fa-solid fa-location-dot"></i>Chicago, IL</p>
+            <p><i class="fa-solid fa-phone"></i>+1 (708)-506-2319</p>
+            <p><i class="fa-solid fa-envelope"></i>alaynaonetay@gmail.com</p>
+        </div>
     </footer>
     <script>
         const yearTag = document.querySelector('.year-tag')
@@ -139,6 +147,12 @@
         yearTag.textContent = date
 
         console.log("current year: ", date)
+
+        document.addEventListener("mousemove", (e) => {
+            console.log("ok")
+                document.body.style.setProperty("--x", e.clientX + "px");
+                document.body.style.setProperty("--y", e.clientY + "px");
+            });
     </script>
 </body>
 </html>
