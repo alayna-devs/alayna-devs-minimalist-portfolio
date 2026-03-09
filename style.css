@@ -15,10 +15,11 @@ COLOR SYSTEM
 :root {
 
     --bg-dark: #0e0000;
-    --bg-dark2: #030000;
+    --bg-dark2: #1a0000;
 
     --accent: #ff4b4b;
     --accent-soft: #ff6b6b;
+    --accent-softer: #ffb5b5;
 
     --glass: rgba(103, 0, 0, 0.25);
     --card-bg: rgba(255,255,255,0.05);
@@ -38,7 +39,6 @@ html, body {
         #090000,
         var(--bg-dark2)
     );
-
     color: white;
     font-family: system-ui, sans-serif;
     line-height: 1.6;
@@ -69,16 +69,12 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 1rem 4rem;
-
     background: var(--glass);
     backdrop-filter: blur(6px);
-
     box-shadow: 0px 8px 20px rgba(0,0,0,0.6);
     z-index: 2;
 }
@@ -110,6 +106,7 @@ nav a:hover {
     font-size: 2.5rem;
 }
 
+
 /* =========================
 MAIN CONTENT
 ========================= */
@@ -125,6 +122,7 @@ MAIN CONTENT
     margin: auto;
     padding: 2rem;
     background: var(--card-bg);
+    border: 1px solid var(--accent-softer);
     border-radius: 12px;
     backdrop-filter: blur(4px);
 }
@@ -134,12 +132,18 @@ SECTIONS
 ========================= */
 
 #main section {
-    margin: 2rem 0;
+    margin: 5rem 0;
 }
 
-header > section:first-child {
+main h3 {
+    margin-bottom: 1rem;
+}
+
+header > div:first-child {
     display: flex;
     align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 }
 
 .career-goals {
@@ -151,10 +155,20 @@ header > section:first-child {
 .career-media,
 .career-text {
     flex: 1;
+    min-width: 0;
+}
+
+.career-text {
+    line-height: 1.6;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 .career-text h3{
-    color: #ffb5b5;
+    color: var(--accent-softer);
 }
 
 /* =========================
@@ -171,11 +185,17 @@ MEDIA
 }
 
 .career-media img,
+.career-media video {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.career-media img,
 .career-media video,
 .career-media audio {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 .career-media p {
@@ -188,10 +208,6 @@ MEDIA
 TYPOGRAPHY
 ========================= */
 
-main h3 {
-    margin-bottom: 1rem;
-}
-
 span {
     color: var(--accent-soft);
     font-weight: 600;
@@ -203,16 +219,14 @@ span {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-mark {
-    background: #ff6b6bBF;
+.cover-letter-span {
+    font-style: normal;
+    font-weight: 800;
 }
 
-.career-text {
-    line-height: 1.6;
-    font-size: 1rem;
-    background: rgba(255,255,255,0.03);
-    padding: 1rem;
-    border-radius: 8px;
+mark {
+    background: none;
+    color: var(--accent-soft);
 }
 
 /* =========================
@@ -221,24 +235,28 @@ LISTS
 
 ul {
     list-style-position: inside;
+    
+}
+
+li::marker {
+    color: var(--accent-soft);
 }
 
 /* =========================
 GRID LAYOUTS
 ========================= */
 
-.skills-grid{
+.skills-grid {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-    gap:.5rem;
+    gap: 0.5rem;
 }
 
-.highlights-grid{
+.highlights-grid {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap: 2rem;
     list-style: none;
-    
 }
 
 /* =========================
@@ -314,16 +332,19 @@ BUTTONS
 .btn-links {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 1rem;
+    gap: 2rem;
 }
 
 .btn-primary {
     position: relative;
     display: inline-block;
+    max-width: 80%;
+    max-height: 60px;
     background: var(--accent);
     color: white;
-    padding: 0.5rem 1.4rem;
+    padding: 0.5rem 1rem;
     border-radius: 6px;
+    font-size: clamp(0.8rem, 1vw, 2rem);
     font-weight: 600;
     transition: transform 0.25s, background 0.25s;
 }
@@ -345,6 +366,11 @@ BUTTONS
 
 .btn-primary:hover::after {
     width: 100%;
+}
+
+.wip-btn {
+    background-color: #ae4e4e;
+    cursor: not-allowed;
 }
 
 /* =========================
@@ -383,9 +409,8 @@ legend {
 label {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    color: #ffb5b5;
+    color: var(--accent-softer);
 }
-
 
 input,
 textarea,
@@ -393,10 +418,10 @@ select {
     padding: 0.6rem 0.7rem;
     border-radius: 6px;
     border: 1px solid rgba(255,255,255,0.15);
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.4);
     color: white;
     font-family: inherit;
-    transition: border .25s, box-shadow .25s, background .25s;
+    transition: border 0.25s, box-shadow 0.25s, background 0.25s;
 }
 
 input:hover,
@@ -419,7 +444,7 @@ textarea {
 .contact-title {
     margin-top: 1.25rem;
     font-weight: 600;
-    color: #ffb5b5;
+    color: var(--accent-softer);
 }
 
 .contact-time {
@@ -448,10 +473,11 @@ FOOTER
 footer {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 7rem;
     padding: 1rem;
+    font-size: clamp(0.8rem, 1vw, 2rem);
     background: var(--glass);
     backdrop-filter: blur(6px);
+    margin-top: 7rem;
 }
 
 footer > div {
@@ -459,7 +485,7 @@ footer > div {
     align-items: center;
 }
 
-footer > div:nth-child(2) {
+footer > div:nth-child(1) {
     gap: 1rem;
 }
 
@@ -475,22 +501,97 @@ footer i {
     color: var(--accent-soft);
 }
 
-@media (max-width:768px){
-    nav{
-    padding:1rem 2rem;
+
+
+/* Tablet */
+@media (max-width: 768px){
+    html {
+        font-size:14px;
+    }
+
+    nav {
+        padding: 2rem;
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 1.2rem;
+    }
+
+    nav p {
+        display: none;
+    }
+
+    .selfie-img {
+        width: 13rem;
+        height: 13rem;
+        margin-left: 0;
+        margin-right: auto;
+        border-radius: 0;
+        margin-top: 2rem;
+    }
+
+    tbody {
+        font-size: x-small;
+    }
+
+    .career-goals {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .career-goals section {
+        margin-bottom: 4rem;
+    }
+
+    .career-media audio {
+        flex-shrink: 0;         
+        min-width: 450px;       
+        height: 50px;           
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    footer > div:first-child {
+        align-items: normal;
+        flex-direction: column;
+        
+    }
 }
 
-    .nav-links{
-        gap:1.2rem;
+/* Mobile */
+@media (max-width: 500px){
+    nav {
+        padding: 2rem 0rem;
+        font-size: 1rem;
+        justify-content: center;
     }
 
-    .nav-p{
-        font-size:1.2rem;
+    header > div:first-child {
+    flex-direction: column;
+    align-items: center;
     }
 
-    .career-goals{
-        flex-direction:column;
-        text-align:center;
+    .selfie-img {
+        width: 12rem;
+        height: 12rem;
     }
 
+    .btn-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .career-media audio {      
+        min-width: 250px;       
+        height: 40px;           
+    }
+
+    .contact-form fieldset {
+        padding: 0.7rem;
+    }
 }

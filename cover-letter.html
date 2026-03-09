@@ -12,9 +12,9 @@
         <nav>
             <p class="brand-name">alayna_devs</p>
             <div class="nav-links">
-                <div><a href="/resume.html">Resume</a></div>
-                <div><a href="/cover-letter.html">Cover Letter</a></div>
-                <div><a href="/career-goals.html">Career Goals</a></div>
+                <div><a rel="prefetch" href="/resume.html">Resume</a></div>
+                <div><a rel="prefetch" href="/cover-letter.html">Cover Letter</a></div>
+                <div><a rel="prefetch" href="/career-goals.html">Career Goals</a></div>
             </div>
         </nav>
     </header>
@@ -22,15 +22,15 @@
     <main id="main">
         <article>
             <section>
-                <h1>Software Engineer Cover Letter</h1>
+                <h1>Software Engineer <span class="cover-letter-span">Cover Letter</span></h1>
                 <hr>
                 <section>
                     <p>
-                        <span class="large-span">I</span>’m a <mark><strong>software engineer/software developer</strong></mark> driven by curiosity and the
+                        I’m a <mark><strong>software engineer/software developer</strong></mark> driven by curiosity and the
                         desire to understand how systems actually work <em>beneath the surface</em>. My path into programming began while
                         exploring how games were built using the <mark><strong>scripting language Lua</strong></mark>, which sparked a long-term interest in
                         software development and application design. Since then, that curiosity has grown into hands-on experience
-                        across mobile, cloud, and web development environments. Today, my primary focus is <mark><strong>full-stack web
+                        across game, mobile, cloud, and web development environments. Today, my primary focus is <mark><strong>full-stack web
                             development</strong></mark>, building modern web applications using technologies such as <mark><strong>React,
                         Next.js, Tailwindcss, JavaScript, TypeScript,
                         Node.js, Express.js, Python, and cloud services.</strong></mark>
@@ -76,15 +76,15 @@
 
     <footer id="footer">
         <div>
-            <p>&copy&nbsp</p>
-            <p class="year-tag"></p>
-            <p> &nbspAlayna Taylor. All rights reserved.</p>
-        </div>
-    
-        <div>
             <p><i class="fa-solid fa-location-dot"></i>Chicago, IL</p>
             <p><i class="fa-solid fa-phone"></i>+1 (708)-506-2319</p>
             <p><i class="fa-solid fa-envelope"></i>alaynaonetay@gmail.com</p>
+        </div>
+    
+        <div>
+            <p>&copy&nbsp</p>
+            <p class="year-tag"></p>
+            <p> &nbspAlayna Taylor. All rights reserved.</p>
         </div>
     </footer>
 
@@ -96,7 +96,6 @@
         console.log("current year: ", date)
 
         document.addEventListener("mousemove", (e) => {
-            console.log("ok")
             document.body.style.setProperty("--x", e.clientX + "px");
             document.body.style.setProperty("--y", e.clientY + "px");
         });

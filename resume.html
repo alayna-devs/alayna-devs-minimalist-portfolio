@@ -12,9 +12,9 @@
         <nav>
             <p class="brand-name">alayna_devs</p>
             <div class="nav-links">
-                <div><a href="/resume.html">Resume</a></div>
-                <div><a href="/cover-letter.html">Cover Letter</a></div>
-                <div><a href="/career-goals.html">Career Goals</a></div>
+                <div><a rel="prefetch" href="/resume.html">Resume</a></div>
+                <div><a rel="prefetch" href="/cover-letter.html">Cover Letter</a></div>
+                <div><a rel="prefetch" href="/career-goals.html">Career Goals</a></div>
             </div>
         </nav>
     </header>
@@ -22,21 +22,26 @@
     <main id="main">
         <article>
             <header>
-                <section>
+                <div>
                     <div>
                         <h1 class="name">Alayna Taylor</h1>
                         <h2>Software Engineer | Full-Stack Web Developer | CS Undergraduate</h2>
                     </div>
-                    <img src="/selfie.png" class="selfie-img" alt="Alayna Taylor">
-                </section>
+                    <img src="/selfie.webp" class="selfie-img" alt="Alayna Taylor" width="600" height="400" loading="lazy">
+                </div>
                 <hr>
 
                 <section>
                     <h3>Summary</h3>
-                    <p>Entry-Level <span><em>Software Engineer</em></span> and <span><em>WGU Computer Science undergraduate</em></span> with 1 year of experience building full-stack web
-                    applications using <span>React, Node.js, Express, and modern databases.</span> Experienced in developing responsive interfaces and
-                    integrating external APIs. Focused on writing clean,
-                    maintainable code and building practical software solutions from concept to deployment.</p>
+                    <p>
+                        Entry-Level <span><em>Software Engineer</em></span> and
+                        <span><em>WGU Computer Science undergraduate</em></span> with nearly two years of hands-on experience building and
+                        testing with modern applications. My focus is on full-stack development using
+                        <span>React, TailwindCSS, JavaScript, TypeScript, Node.js, and Express</span>, along with experience developing
+                        responsive interfaces and integrating external APIs. I enjoy writing clean, maintainable code and building practical
+                        software solutions while continuing to strengthen my understanding of modern development practices and scalable
+                        software design.
+                    </p>
                 </section>
             </header>
             <hr>
@@ -49,6 +54,7 @@
                         <li>Python</li>
                         <li>React</li>
                         <li>Next.js</li>
+                        <li>Node.js</li>
                         <li>Express.js</li>
                         <li>PostgreSQL</li>
                         <li>MongoDB</li>
@@ -75,7 +81,7 @@
                 <h3>Experience</h3>
                 <div class="table-wrapper">
                     <table>
-                        <caption>Work Experience</caption>
+                        <caption><strong>Work Experience</strong></caption>
                         <thead>
                             <tr>
                                 <th>Date</th>
@@ -126,8 +132,8 @@
             </section>
 
             <section class="btn-links">
-                <a href="" rel="noopener noreferrer" class="btn-primary" title="Coming soon!"><i class="fa-solid fa-arrow-up-right-from-square"></i>Modern Portfolio</a>
-                <a href="" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fa-solid fa-file-pdf"></i>PDF Resume</a>
+                <a href="" rel="noopener noreferrer" class="btn-primary wip-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i>Modern Portfolio (W.I.P)</a>
+                <a href="/AT_Tech_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fa-solid fa-file-pdf"></i>PDF Resume</a>
                 <a href="https://www.linkedin.com/in/alayna-devs/" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fa-brands fa-linkedin"></i>LinkedIN</a>
                 <a href="https://github.com/alayna-devs" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fa-brands fa-github"></i>GitHub</a>
             </section>
@@ -136,15 +142,15 @@
     <br>
     <footer id="footer">
         <div>
-            <p>&copy&nbsp</p>
-            <p class="year-tag"></p>
-            <p> &nbspAlayna Taylor. All rights reserved.</p>      
-        </div>
-
-        <div>
             <p><i class="fa-solid fa-location-dot"></i>Chicago, IL</p>
             <p><i class="fa-solid fa-phone"></i>+1 (708)-506-2319</p>
             <p><i class="fa-solid fa-envelope"></i>alaynaonetay@gmail.com</p>
+        </div>
+
+        <div>
+            <p>&copy&nbsp</p>
+            <p class="year-tag"></p>
+            <p> &nbspAlayna Taylor. All rights reserved.</p>      
         </div>
     </footer>
     <script>
@@ -155,7 +161,6 @@
         console.log("current year: ", date)
 
         document.addEventListener("mousemove", (e) => {
-            console.log("ok")
                 document.body.style.setProperty("--x", e.clientX + "px");
                 document.body.style.setProperty("--y", e.clientY + "px");
             });

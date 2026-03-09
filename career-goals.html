@@ -12,9 +12,9 @@
         <nav>
             <p class="brand-name">alayna_devs</p>
             <div class="nav-links">
-                <div><a href="/resume.html">Resume</a></div>
-                <div><a href="/cover-letter.html">Cover Letter</a></div>
-                <div><a href="/career-goals.html">Career Goals</a></div>
+                <div><a rel="prefetch" href="/resume.html">Resume</a></div>
+                <div><a rel="prefetch" href="/cover-letter.html">Cover Letter</a></div>
+                <div><a rel="prefetch" href="/career-goals.html">Career Goals</a></div>
             </div>
         </nav>
     </header>
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="career-media">
-                    <img src="/game-dev.jpg" alt="Controller in Front of Computer Code">
+                    <img src="/game-dev.webp" alt="Controller in front of a computer with code." loading="lazy">
                     <p>"From Unsplash by orva studio"</p>
                 </div>
             </section>
@@ -51,7 +51,7 @@
                 </div>
                 
                 <div class="career-media">
-                    <video controls width="100%">
+                    <video controls preload="metadata">
                         <source src="/coding.mp4" type="video/mp4">
                         Your browser does not support video.
                     </video>
@@ -63,14 +63,14 @@
                 <div class="career-text">
                     <h3>Why Software Development</h3>
                     <p>
-                    In this short recording I talk about what motivated
+                    In this short recording I share about what motivated
                     me to pursue a career in software engineering and
                     how I plan to grow in the industry.
                     </p>
                 </div>
                 
                 <div class="career-media">
-                    <audio controls>
+                    <audio controls preload="none">
                     <source src="/why-software-development.mp3" type="audio/mpeg">
                         Your browser does not support audio.
                     </audio>
@@ -79,48 +79,46 @@
             </section>
             
             <section>
-            <form action="#" class="contact-form">
+            <form action="https://wp.zybooks.com/form-viewer.php" method="POST" class="contact-form">
+            
                 <fieldset>
                     <legend>How can I help your business?</legend>
             
                     <div class="form-grid">
-            
                         <div class="form-group">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" required>
+                            <input type="text" id="first-name" name="first-name" required>
                         </div>
             
                         <div class="form-group">
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" required>
+                            <input type="text" id="last-name" name="last-name" required>
                         </div>
             
                         <div class="form-group">
                             <label for="company-name">Company Name</label>
-                            <input type="text" id="company-name">
+                            <input type="text" id="company-name" name="company-name">
                         </div>
             
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" name="email" required>
                         </div>
             
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone">
+                            <input type="tel" id="phone" name="phone">
                         </div>
-            
                     </div>
             
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" rows="5"></textarea>
+                        <textarea id="message" name="message" rows="5"></textarea>
                     </div>
-            
+
                     <p class="contact-title">Preferred Contact Time</p>
             
                     <div class="contact-time">
-            
                         <label>
                             <input type="radio" name="contact-time" value="AM">
                             AM
@@ -135,12 +133,11 @@
                             <input type="radio" name="contact-time" value="Anytime">
                             Anytime
                         </label>
-            
                     </div>
             
                     <div class="form-group">
                         <label for="drop-down">Communication Preference</label>
-                        <select id="drop-down">
+                        <select id="drop-down" name="communication-preference">
                             <option value="phone">Phone</option>
                             <option value="email">Email</option>
                             <option value="text">Text</option>
@@ -148,9 +145,7 @@
                     </div>
             
                     <button class="btn-primary" type="submit">Send Message</button>
-            
                 </fieldset>
-            
             </form>
             </section>
         </article>
@@ -158,15 +153,15 @@
     
     <footer id="footer">
         <div>
-            <p>&copy&nbsp</p>
-            <p class="year-tag"></p>
-            <p> &nbspAlayna Taylor. All rights reserved.</p>
-        </div>
-    
-        <div>
             <p><i class="fa-solid fa-location-dot"></i>Chicago, IL</p>
             <p><i class="fa-solid fa-phone"></i>+1 (708)-506-2319</p>
             <p><i class="fa-solid fa-envelope"></i>alaynaonetay@gmail.com</p>
+        </div>
+    
+        <div>
+            <p>&copy&nbsp</p>
+            <p class="year-tag"></p>
+            <p> &nbspAlayna Taylor. All rights reserved.</p>
         </div>
     </footer>
 
@@ -178,7 +173,6 @@
         console.log("current year: ", date)
 
         document.addEventListener("mousemove", (e) => {
-            console.log("ok")
             document.body.style.setProperty("--x", e.clientX + "px");
             document.body.style.setProperty("--y", e.clientY + "px");
         });
