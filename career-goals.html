@@ -10,56 +10,148 @@
 <body id="app">
     <header>
         <nav>
-            <p>alayna_devs</p>
-            <div><a href="/resume.html">Resume</a></div>
-            <div><a href="/cover-letter.html">Cover Letter</a></div>
-            <div><a href="/career-goals.html">Career Goals</a></div>
+            <p class="brand-name">alayna_devs</p>
+            <div class="nav-links">
+                <div><a href="/resume.html">Resume</a></div>
+                <div><a href="/cover-letter.html">Cover Letter</a></div>
+                <div><a href="/career-goals.html">Career Goals</a></div>
+            </div>
         </nav>
     </header>
 
-    <main class="main">
+    <main id="main">
         <article>
-            <img src="" alt="">
-            <audio src=""></audio>
-            
-            <h2>AR Built with Unity and C#</h2>
-            <video width="300" height="400" controls>
-                <source src="/AR-APP.mp4" type="video/mp4">
-            </video>
+            <section class="career-goals">
+                <div class="career-text">
+                    <h3>My Career Vision</h3>
+                    <p>
+                        My long-term goal is to become a software engineer in game development and AI. I'm
+                        particularly interested in working with engines like Unity or Godot and using languages
+                        such as C# and C++. I enjoy the combination of creativity and problem-solving that game development requires, from
+                        designing mechanics and interactive environments. As I continue
+                        learning, I hope to contribute to projects by blending creativity and strong technical design for an engaging gameplay that players can
+                        truly enjoy.
+                    </p>
+                </div>
+
+                <div class="career-media">
+                    <img src="/game-dev.jpg" alt="Controller in Front of Computer Code">
+                    <p>"From Unsplash by orva studio"</p>
+                </div>
+            </section>
+
+            <section class="career-goals">
+                <div class="career-text">
+                    <h3> My Inspiration</h3>
+                    <p>
+                        Seeing people bring ideas to life through digital experiences reminds me why I became interested in this field in the
+                        first place. Whether it's building interactive worlds, solving problems, or creating something people can enjoy, the
+                        process of turning imagination into something real is what continues to motivate me to keep learning and improving.
+                    </p>
+                </div>
+                
+                <div class="career-media">
+                    <video controls width="100%">
+                        <source src="/coding.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                    <p>"From Pixaby by Coverr-Free-Footage"</p>
+                </div>
+            </section>
+
+            <section class="career-goals">
+                <div class="career-text">
+                    <h3>Why Software Development</h3>
+                    <p>
+                    In this short recording I talk about what motivated
+                    me to pursue a career in software engineering and
+                    how I plan to grow in the industry.
+                    </p>
+                </div>
+                
+                <div class="career-media">
+                    <audio controls>
+                    <source src="/why-software-development.mp3" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+                    <p>"Produced using ElevenLabs"</p>
+                </div>
+            </section>
             
             <section>
-                <h2>Contact Me</h2>
-                <form action="https://wp.zybooks.com/form-viewer.php">
-                    <label for="">First Name</label>
-                    <input type="text">
+            <form action="#" class="contact-form">
+                <fieldset>
+                    <legend>How can I help your business?</legend>
             
-                    <label for="">Last Name</label>
-                    <input type="text">
+                    <div class="form-grid">
             
-                    <label for="">Company Name</label>
-                    <input type="text">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" required>
+                        </div>
             
-                    <label for="">Email Address</label>
-                    <input type="email">
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" required>
+                        </div>
             
-                    <label for="">Phone Number</label>
-                    <input type="tel">
+                        <div class="form-group">
+                            <label for="company-name">Company Name</label>
+                            <input type="text" id="company-name">
+                        </div>
             
-                    <label for="">Message</label>
-                    <input type="text">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
             
-                    <label for="">Contact Time</label>
-                    <input type="radio"> <!--AM, PM, ANYTIME-->
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone">
+                        </div>
             
-                    <label for="">First Name</label>
-                    <select name="" id="">
-                        <option value="">Phone</option>
-                        <option value="">Email</option>
-                        <option value="">Text</option>
-                    </select>
+                    </div>
             
-                    <button>Submit</button>
-                </form>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5"></textarea>
+                    </div>
+            
+                    <p class="contact-title">Preferred Contact Time</p>
+            
+                    <div class="contact-time">
+            
+                        <label>
+                            <input type="radio" name="contact-time" value="AM">
+                            AM
+                        </label>
+            
+                        <label>
+                            <input type="radio" name="contact-time" value="PM">
+                            PM
+                        </label>
+            
+                        <label>
+                            <input type="radio" name="contact-time" value="Anytime">
+                            Anytime
+                        </label>
+            
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="drop-down">Communication Preference</label>
+                        <select id="drop-down">
+                            <option value="phone">Phone</option>
+                            <option value="email">Email</option>
+                            <option value="text">Text</option>
+                        </select>
+                    </div>
+            
+                    <button class="btn-primary" type="submit">Send Message</button>
+            
+                </fieldset>
+            
+            </form>
             </section>
         </article>
     </main>
@@ -77,5 +169,20 @@
             <p><i class="fa-solid fa-envelope"></i>alaynaonetay@gmail.com</p>
         </div>
     </footer>
+
+    <script>
+        const yearTag = document.querySelector('.year-tag')
+        const date = new Date().getFullYear()
+        yearTag.textContent = date
+
+        console.log("current year: ", date)
+
+        document.addEventListener("mousemove", (e) => {
+            console.log("ok")
+            document.body.style.setProperty("--x", e.clientX + "px");
+            document.body.style.setProperty("--y", e.clientY + "px");
+        });
+    </script>
 </body>
 </html>
+

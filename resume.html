@@ -10,19 +10,21 @@
 <body>
     <header>
         <nav>
-            <p>alayna_devs</p>
-            <div><a href="/resume.html">Resume</a></div>
-            <div><a href="/cover-letter.html">Cover Letter</a></div>
-            <div><a href="/career-goals.html">Career Goals</a></div>
+            <p class="brand-name">alayna_devs</p>
+            <div class="nav-links">
+                <div><a href="/resume.html">Resume</a></div>
+                <div><a href="/cover-letter.html">Cover Letter</a></div>
+                <div><a href="/career-goals.html">Career Goals</a></div>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <article>
             <header>
                 <section>
                     <div>
-                        <h1>Alayna Taylor</h1>
+                        <h1 class="name">Alayna Taylor</h1>
                         <h2>Software Engineer | Full-Stack Web Developer | CS Undergraduate</h2>
                     </div>
                     <img src="/selfie.png" class="selfie-img" alt="Alayna Taylor">
@@ -42,7 +44,8 @@
                 <section>
                     <h3>Skills</h3>
                     <ul class="skills-grid">
-                        <li>JavaScript/TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
                         <li>Python</li>
                         <li>React</li>
                         <li>Next.js</li>
@@ -70,53 +73,56 @@
             <hr>
             <section id="experience">
                 <h3>Experience</h3>
-                <table>
-                    <caption>Work Experience</caption>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Title</th>
-                            <th>Company</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
+                <div class="table-wrapper">
+                    <table>
+                        <caption>Work Experience</caption>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Company</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <tr>
-                            <td>02/2025-11/2025</td>
-                            <td>Full-Stack Web Developer Program</td>
-                            <td>Code The Dream</td>
-                            <td>Built web applications using <span>JavaScript, React, and Node.js</span>, strengthening skills in frontend architecture and state
-                            management. Practiced version control, debugging, and project-based development while building interactive applications.</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>02/2025-11/2025</td>
+                                <td>Full-Stack Web Developer Program</td>
+                                <td>Code The Dream</td>
+                                <td>Built web applications using <span>JavaScript, React, and Node.js</span>, strengthening skills in frontend architecture and state
+                                management. Practiced version control, debugging, and project-based development while building interactive applications.</td>
+                            </tr>
 
-                        <tr>
-                            <td>01/2024-06/2024</td>
-                            <td>AWS Cloud Engineer</td>
-                            <td>United Airlines</td>
-                            <td> I migrated and validated customer data within <span>AWS DynamoDB</span>, ensuring profile accuracy across systems. Contributed to a <span>CRM</span>
-                            cloud rewrite using <span>AWS tools, Docker, Java/Spring Boot, and CI/CD workflows</span> while collaborating with the development
-                            team.</td>
-                        </tr>
+                            <tr>
+                                <td>01/2024-06/2024</td>
+                                <td>AWS Cloud Engineer</td>
+                                <td>United Airlines</td>
+                                <td> I migrated and validated customer data within <span>AWS DynamoDB</span>, ensuring profile accuracy across systems. Contributed to a <span>CRM</span>
+                                cloud rewrite using <span>AWS tools, Docker, Java/Spring Boot, and CI/CD workflows</span> while collaborating with the development
+                                team.</td>
+                            </tr>
 
-                        <tr>
-                            <td>05/2023-01/2024</td>
-                            <td>Android App Developer</td>
-                            <td>United Airlines</td>
-                            <td>I developed and debugged mobile app features using <span>Kotlin, Android Studio, and JUnit</span>. Mostly focused on front-end UI behavior with some dynamic data backend
-                            integration.</td>
-                        </tr>
+                            <tr>
+                                <td>05/2023-01/2024</td>
+                                <td>Android App Developer</td>
+                                <td>United Airlines</td>
+                                <td>I developed and debugged mobile app features using <span>Kotlin, Android Studio, and JUnit</span>. Mostly focused on front-end UI behavior with some dynamic data backend
+                                integration.</td>
+                            </tr>
 
-                        <tr>
-                            <td>01/2023-05/2023</td>
-                            <td>Software Engineer Intern</td>
-                            <td>i.c.stars</td>
-                            <td>I built an <span>Augmented Reality mobile feature using Unity and C#</span> that allowed field agents to overlay interactive status
-                            indicators on airport kiosks. Gained experience across <span>frontend development (HTML, CSS, JavaScript, Angular), backend
-                            workflows, and SQL-based data systems</span> while collaborating in a professional engineering environment.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <tr>
+                                <td>01/2023-05/2023</td>
+                                <td>Software Engineer Intern</td>
+                                <td>i.c.stars</td>
+                                <td>I built an <span>Augmented Reality mobile feature using Unity and C#</span> that allowed field agents to overlay interactive status
+                                indicators on airport kiosks. Gained experience across <span>frontend development (HTML, CSS, JavaScript, Angular), backend
+                                workflows, and SQL-based data systems</span> while collaborating in a professional engineering environment.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
             </section>
 
             <section class="btn-links">
